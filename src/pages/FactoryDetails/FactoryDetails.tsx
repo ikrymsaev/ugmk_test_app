@@ -1,11 +1,10 @@
 import { useParams } from "react-router-dom";
-import { useTypedDispatch } from "../../../store/hooks/useTypedDispatch";
 import { useEffect } from "react";
-import { requestFactoryProductsByMonth } from "../../../store/slices/factory/factoryThunks";
-import { useTypedSelector } from "../../../store/hooks/useTypedSelector";
-import { selectFactoryDetails } from "../../../store/slices/factory/factorySelectors";
 import styles from './FactoryDetails.module.css';
 import { DetailsDiagram } from "./components/DetailsDiagram/DetailsDiagram";
+import { useTypedDispatch, useTypedSelector } from "@/store/hooks";
+import { requestFactoryProductsByMonth, selectFactoryDetails } from "@/store/slices/factory";
+import { Container } from "@mui/material";
 
 export const FactoryDetails = () => {
   const {factory_id, month} = useParams<{ factory_id: string; month: string }>();
@@ -23,8 +22,10 @@ export const FactoryDetails = () => {
 
   return (
     <div className={styles.wrapper}>
-      <h2>Details Page</h2>
-      <DetailsDiagram data={details} />
+      <Container maxWidth="md">
+        <h2>Details Page</h2>
+        <DetailsDiagram data={details} />
+      </Container>
     </div>
   )
 }

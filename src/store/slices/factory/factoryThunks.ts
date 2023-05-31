@@ -1,6 +1,6 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
+import { apiService } from "@/services/ApiService";
 import { TFactoryProductsResponse, TRequestDetailsParams } from "./types";
-import { apiService } from "../../../services/ApiService";
 import { IProductEntity } from "../products/types";
 import { clearDetails } from "./factorySlice";
 

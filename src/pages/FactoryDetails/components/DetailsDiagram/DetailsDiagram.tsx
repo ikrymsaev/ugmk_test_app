@@ -4,7 +4,7 @@ import styles from './DetailsDiagram.module.css';
 interface IProps {
   data: any[];
 }
-const COLORS = ['#0088FE', '#FFBB28', '#FF8042'];
+const COLORS = ['#0088FE', '#FF8042', '#FFBB28'];
 
 export const DetailsDiagram = (props: IProps): JSX.Element => {
   const { data } = props;

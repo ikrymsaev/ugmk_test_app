@@ -19,6 +19,7 @@ const FactorySlice = createSlice({
       state.isLoading = false;
     });
     builder.addCase(requestFactoryProductsByMonth.rejected, state => {
+      state.productsList = [];
       state.isLoading = false;
     });
   },

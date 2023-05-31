@@ -1,7 +1,7 @@
-import { createSelector } from "@reduxjs/toolkit";
-import { RootState } from "../../reducers";
-import { IProductEntity, IProductSliceState, TFilterValue, TProductsByMonth } from "./types";
 import moment from "moment";
+import { RootState } from "@/store/reducers";
+import { createSelector } from "@reduxjs/toolkit";
+import { IProductEntity, IProductSliceState, TFilterValue, TProductsByMonth } from "./types";
 
 const selectProductsSlice = (state: RootState): IProductSliceState => state.products || {};
 const selectProducts = createSelector(selectProductsSlice, (slice: IProductSliceState): IProductEntity[] => slice.productsList);
@@ -33,6 +33,10 @@ const selectProductsDiagramData = createSelector(
           productsByMonth[monthIndex][`factory_${factory_id}`] += product3;
         }
       }
+    })
+    productsByMonth.forEach((item, index) => {
+      productsByMonth[index].factory_1 = Number((item.factory_1 / 1000).toFixed(2))
+      productsByMonth[index].factory_2 = Number((item.factory_2 / 1000).toFixed(2))
     })
     
     return productsByMonth;

@@ -1,6 +1,6 @@
+import { FactoryDetails } from "@/pages/FactoryDetails";
+import { ProductsPage } from "@/pages/ProductsPage";
 import { createBrowserRouter } from "react-router-dom";
-import { ProductsPage } from "../pages/Products/ProductsPage/ProductsPage";
-import { FactoryDetails } from "../pages/Products/FactoryDetails/FactoryDetails";
 
 export const routes = createBrowserRouter([
   {

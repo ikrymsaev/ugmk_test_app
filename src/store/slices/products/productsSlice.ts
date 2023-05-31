@@ -28,6 +28,7 @@ const ProductSlice = createSlice({
       state.isLoading = false;
     });
     builder.addCase(requestProducts.rejected, state => {
+      state.productsList = [];
       state.isLoading = false;
     });
   },

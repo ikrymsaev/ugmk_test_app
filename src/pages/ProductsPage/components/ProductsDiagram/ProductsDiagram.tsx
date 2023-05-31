@@ -1,6 +1,6 @@
 import { Bar, BarChart, CartesianGrid, Legend, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts"
 import styles from './ProductsDiagram.module.css';
-import { TProductsByMonth } from "../../../../../store/slices/products/types";
+import { TProductsByMonth } from "@/store/slices/products/types";
 import { useNavigate } from "react-router-dom";
 
 interface IProps {

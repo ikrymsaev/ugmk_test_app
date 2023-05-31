@@ -1,11 +1,7 @@
+import { useTypedDispatch, useTypedSelector } from "@/store/hooks";
 import { FormControl, InputLabel, MenuItem, Select, SelectChangeEvent } from "@mui/material"
+import { TFilterValue, productsFilterOptions, selectFilter, setProductsFilter } from "@/store/slices/products";
 import styles from './ProductsFilter.module.css';
-import { selectFilter } from "../../../../../store/slices/products/productsSelectors";
-import { TFilterValue } from "../../../../../store/slices/products/types";
-import { setProductsFilter } from "../../../../../store/slices/products/productsSlice";
-import { productsFilterOptions } from "../../../../../store/slices/products/constants";
-import { useTypedSelector } from "../../../../../store/hooks/useTypedSelector";
-import { useTypedDispatch } from "../../../../../store/hooks/useTypedDispatch";
 
 export const ProductsFilter = () => {
   const dispatch = useTypedDispatch();
