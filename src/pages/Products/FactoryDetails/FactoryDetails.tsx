@@ -18,6 +18,7 @@ export const FactoryDetails = () => {
     if (factory_id && month) {
       dispatch(requestFactoryProductsByMonth({ factory_id, month }))
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
