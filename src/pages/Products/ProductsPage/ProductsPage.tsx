@@ -13,7 +13,8 @@ export const ProductsPage = () => {
 
   useEffect(() => {
     dispatch(requestProducts())
-  }, [dispatch])
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   return (
     <div className={styles.wrapper}>
