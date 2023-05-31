@@ -12,8 +12,10 @@ export const ProductsDiagram = (props: IProps): JSX.Element => {
 
   const navigate = useNavigate()
 
-  const handleClickBar = (factoryId: number) => (e: any) => {
-    navigate(`details/${factoryId}/${e.monthId}`);
+  const handleClickBar = (factoryId: number) => (e: unknown) => {
+    if (!!e && typeof e === 'object' && 'monthId' in e) {
+      navigate(`details/${factoryId}/${e.monthId}`);
+    }
   }
 
   return (

@@ -10,7 +10,6 @@ import { useTypedDispatch } from "../../../../../store/hooks/useTypedDispatch";
 export const ProductsFilter = () => {
   const dispatch = useTypedDispatch();
   const productsFilter = useTypedSelector(selectFilter)
-  console.log(productsFilter);
 
   const handleChange = (event: SelectChangeEvent<TFilterValue[]>) => {
     const { target: { value } } = event;

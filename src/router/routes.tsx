@@ -1,6 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import { ProductsPage } from "../pages/Products/ProductsPage/ProductsPage";
-import { ProductDetailsPage } from "../pages/Products/ProductDetailsPage";
+import { FactoryDetails } from "../pages/Products/FactoryDetails/FactoryDetails";
 
 export const routes = createBrowserRouter([
   {
@@ -9,6 +9,6 @@ export const routes = createBrowserRouter([
   },
   {
     path: '/details/:factory_id/:month',
-    element: <ProductDetailsPage />,
+    element: <FactoryDetails />,
   },
 ]);
